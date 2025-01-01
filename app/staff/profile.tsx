@@ -21,16 +21,11 @@ const ProfilePage = () => {
       const response = await fetch(`${API_URL}auth/users/me`, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      if (!response.ok) throw new Error("Failed to fetch user data");
+      if (!response.ok) throw new Error("Login to view the details");
       const data: UserData = await response.json();
       setUserData(data);
     } catch (error) {
-      console.error("Error fetching user data:", error);
-      Toast.show({
-        type: "error",
-        text1: "Error",
-        text2: "Failed to load user data",
-      });
+      console.info("Login to view the user detail");
     } finally {
       setIsLoading(false);
     }

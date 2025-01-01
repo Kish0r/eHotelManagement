@@ -212,7 +212,7 @@ const BookingPage = () => {
     try {
       const { paymentIntent, ephemeralKey, customer } = await fetchPaymentSheetParams();
       console.log("paymentIntent", paymentIntent);
-      console.log(ephemeralKey);
+  
       const { error } = await initPaymentSheet({
         merchantDisplayName: "Booking App",
         paymentIntentClientSecret: paymentIntent,
