@@ -28,7 +28,7 @@ export default function RootLayout() {
         />
          <Stack.Screen
           name="staff"
-          options={{ headerShown: true, title: "Bookify" }}
+          options={{ headerShown: true, title: "eHotelManager" }}
         />
         <Stack.Screen
           name="(auth)/login"

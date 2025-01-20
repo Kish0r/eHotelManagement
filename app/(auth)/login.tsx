@@ -113,7 +113,7 @@ const LoginScreen: React.FC = () => {
 
         if (stored) {
           showToast("success", "Login successful!");
-          router.replace("/staff");
+          router.replace("/staff/home");
         } else {
           showToast("error", "Failed to store credentials");
         }
