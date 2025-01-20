@@ -108,7 +108,7 @@ const LoginScreen: React.FC = () => {
         showToast("error", "Invalid credentials");
       }
 
-      if(response.ok && data.access_token && data.user_type === "staff") {
+      if (response.ok && data.access_token && data.user_type === "staff") {
         const stored = await storeToken(data.access_token, data.token_type, data.user_type);
 
         if (stored) {
@@ -137,9 +137,8 @@ const LoginScreen: React.FC = () => {
     <View className="mb-4">
       <Text className="text-gray-700 mb-2 font-medium ml-1">{placeholder}</Text>
       <TextInput
-        className={`h-12 px-4 rounded-xl bg-gray-50 border ${
-          fieldErrors[field] ? "border-red-500" : "border-gray-200"
-        }`}
+        className={`h-12 px-4 rounded-xl bg-gray-50 border ${fieldErrors[field] ? "border-red-500" : "border-gray-200"
+          }`}
         placeholder={`Enter your ${placeholder.toLowerCase()}`}
         value={formData[field]}
         onChangeText={(text) => {
@@ -183,9 +182,8 @@ const LoginScreen: React.FC = () => {
         {renderInput("username", "Username")}
         {renderInput("password", "Password", { secureTextEntry: true })}
         <TouchableOpacity
-          className={`h-12 rounded-xl justify-center items-center mb-4 ${
-            loading ? "bg-gray-400" : "bg-blue-500"
-          }`}
+          className={`h-12 rounded-xl justify-center items-center mb-4 ${loading ? "bg-gray-400" : "bg-blue-500"
+            }`}
           onPress={handleLogin}
           disabled={loading}
         >

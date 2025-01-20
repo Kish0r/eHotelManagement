@@ -13,8 +13,7 @@ import Toast from "react-native-toast-message";
 import { FormData, ApiError } from "@/utility/types";
 import { Link } from "expo-router";
 
-
-
+const API_URL = process.env.EXPO_PUBLIC_API_URL;
 
 const { width } = Dimensions.get("window");
 const IMAGE_HEIGHT = width * 0.4; 
@@ -81,7 +80,7 @@ const RegistrationScreen: React.FC = () => {
 
     try {
       setLoading(true);
-      const response = await fetch("http://192.168.123.3:8000/users/", {
+      const response = await fetch(`${API_URL}users/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

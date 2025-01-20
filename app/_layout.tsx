@@ -16,7 +16,7 @@ export default function RootLayout() {
         />
         <Stack.Screen
           name="complaints/[user_id]"
-          options={{ headerShown: true, title: "Complaints" }}
+          options={{ headerShown: true, title: "Booking and Complaints" }}
         />
         <Stack.Screen
           name="booking/[id]"
@@ -25,6 +25,18 @@ export default function RootLayout() {
         <Stack.Screen
           name="complaints/createcomplaints"
           options={{ headerShown: true, title: "Complaints" }}
+        />
+         <Stack.Screen
+          name="staff"
+          options={{ headerShown: true, title: "Bookify" }}
+        />
+        <Stack.Screen
+          name="(auth)/login"
+          options={{ headerShown: true, title: "Login" }}
+        />
+         <Stack.Screen
+          name="(auth)/registration"
+          options={{ headerShown: true, title: "Registration" }}
         />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
